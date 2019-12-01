@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>LastEat_Phase4 : Edit Admin information</title>
+</head>
+<body>
+<body>
+	<h2>Information to sign in</h2>
+	<form action="EDITINFO.jsp" method="POST">
+		<h4>Provide your information</h4>
+		Tel* : <input type = "text" name = "tel">
+		<br />
+		Address : <input type = "text" name = "Address">
+		<br />
+		Fname : <input type = "text" name = "fname">
+		<br />
+		Lname : <input type = "text" name = "lname">
+		<br />
+		Sex : <select name="sex">
+			<option value=NULL selected>---</option>
+			<option value="M" >M</option>
+			<option value="F" >F</option>
+		</select>
+		<br />
+		Birthday : <input type="time" value="1994-04-05" name="birth_d">
+		<br />
+		Job : <input type = "text" name = "job">
+		<br />
+		<input type="reset" name="Reset" />
+		<input type="submit" name="Submit"/>
+	</form>
+		<button type="button" class="nabyBtn" onClick="location.href='ADMIN_INTERFACE.html'">Exit</button>
+</body>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>LastEat_Phase4 : Enroll Vehicle</title>
+<script src="jquery.js"></script>
+<script>
+function showHide(checked){
+	if(document.getElementById('hidecolor').checked==true){
+		document.getElementById('hiddenField').style.display='block';
+	}else{
+		document.getElementById('hiddenField').style.display='none';
+	}
+}
+function showHide2(checked){
+	if(document.getElementById('hidefuel').checked==true){
+		document.getElementById('hiddenField2').style.display='block';
+	}else{
+		document.getElementById('hiddenField2').style.display='none';
+	}
+}
+</script>
+
+</head>
+
+
+<body>
+<h2>Vehicle information to enroll</h2>
+	<form action="ENROLLV.jsp" method="POST">
+		<h4>Provide your information</h4>
+		Price : <input type = "text" name = "price">
+		<br />
+		Mileage : <input type = "text" name = "mileage">
+		<br />
+		Manufacture date : <input type="time" value="1994-04-05" name="manufacture_date">
+		<br />
+		License plate : <input type="text" value="SSNN-SSS" name="license_plate">
+		<br />
+		Maker : <select name="make">
+			<option value=NULL selected>get from db</option>
+			<option value="AUDI">How to get menu from db?</option>
+		</select>
+		<br />
+		Category : <select name="category">
+			<option value="sportscar" selected>Sports car</option>
+			<option value="suv">SUV</option>
+			<option value="fullsize">Full size</option>
+			<option value="midsize">Mid size</option>
+			<option value="Light-Weight">Light Weight</option>
+		</select>
+		<br />
+		Transmission : <select name="transmission">
+			<option value="automatic" selected>Automatic</option>
+			<option value="manual">Manual</option>
+			<option value="semi-automatic">Semi-Automatic</option>
+		</select>
+		<br />
+		Is Two-tone?<input type = "checkbox" id="hidecolor" onchange="showHide(this.checked)" name = "twotone"/>
+		<br />
+		color : <select name="color" >
+			<option value=NULL selected>---</option>
+			<option value="blue">blue</option>
+			<option value="green">green</option>
+		</select>
+		<p id="hiddenField" style="display:none;">
+		color2 : <select name="color2" >
+			<option value=NULL selected>---</option>
+			<option value="blue">blue</option>
+			<option value="green">green</option>
+		</select>
+		</p>
+		<br />
+		Is Hybrid?<input type = "checkbox" id="hidefuel" onchange="showHide2(this.checked)" name = "hybrid"/>
+		<br />
+		fuel : <select name="fuel" >
+			<option value=NULL selected>---</option>
+			<option value="lpg">LPG</option>
+			<option value="elec">Elec</option>
+		</select>
+		<br />
+		<p id="hiddenField2" style="display:none;">
+		fuel2 : <select name="fuel2" >
+			<option value=NULL selected>---</option>
+			<option value="lpg">LPG</option>
+			<option value="elec">Elec</option>
+		</select>
+		</p>
+		Model : <select name="model">
+			<option value=NULL selected>get from db</option>
+			<option value="AUDI">How to get menu from db?</option>
+		</select>
+		<br />
+		Detailed-Model : <select name="dm">
+			<option value=NULL selected>get from db</option>
+			<option value="AUDI">How to get menu from db?</option>
+		</select>
+		<br />
+		<input type="reset" name="Reset" />
+		<input type="submit" name="Submit"/>
+	</form>
+	<button type="button" class="nabyBtn" onClick="location.href='ADMINS.html'">Exit</button>
+</body>
+</html>
