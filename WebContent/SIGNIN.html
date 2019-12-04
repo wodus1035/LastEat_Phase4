@@ -4,11 +4,13 @@
 <meta charset="EUC-KR">
 <title>LastEat_Phase4 : Sign in</title>
 </head>
+
 <body>
 	<h2>Information to sign in</h2>
 	<form action="SIGNIN.jsp" method="POST">
 		<h4>Provide your information</h4>
 		ID* : <input type = "text" name = "id">
+		<button type="button" class="nabyBtn" onClick='DUP.jsp'>Dup</button>
 		<br />
 		Password* : <input type = "text" name = "password">
 		<br />
@@ -20,23 +22,22 @@
 		<br />
 		Lname : <input type = "text" name = "lname">
 		<br />
-		Sex : <select name="sex">
-			<option value=NULL selected>---</option>
-			<option value="M" >M</option>
-			<option value="F" >F</option>
+		Sex : <select name= "sex">
+			<option value= "M" selected>M</option>
+			<option value= "F" >F</option>
 		</select>
 		<br />
 		Birthday : <input type="time" value="1994-04-05" name="birth_d">
 		<br />
 		Job : <input type = "text" name = "job">
 		<br />
-		Job : <input type = "text" name = "job">
-		<br />
 		<input type = "checkbox" name = "permission" value="1"/>are you admin or saler?
 		<br />
+		
 		<input type="reset" name="Reset" />
 		<input type="submit" name="Submit"/>
 	</form>
+	
 	<button type="button" class="nabyBtn" onClick="location.href='Main.html'">Exit</button>
 </body>
 
